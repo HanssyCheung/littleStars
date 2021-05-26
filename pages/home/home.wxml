@@ -1,2 +1,9 @@
 <!--pages/home/home.wxml-->
+<!-- 数据绑定用mustache语法 -->
 <text>Hello World</text>
+<!-- 列表展示 -->
+<view wx:for="{{students}}" wx:key="item">{{item.id}}-{{item.name}}-{{item.age}}</view>
+<!-- 3.事件监听改变data -->
+<!-- 数据需要mustache，方法不需要 -->
+<view>当前计数：{{counter}}</view>
+<button size="mini" bindtap="handleBtnClick">+</button>
